@@ -31,3 +31,34 @@ Pokédex App is a Django-based web application that serves as a Pokédex to disp
    ```bash
    git clone <URL-of-your-git-repository>
    cd pokedex_app
+   ```
+
+2. **Set up environment variables**
+
+   Copy the `.env.example` file to `.env` and modify the environment variables as needed (e.g., database connection settings, API keys, etc.).
+
+3. **Build and run the application**
+
+   Use Docker Compose to build and start the application:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+   This command will start the Django development server and PostgreSQL database within Docker containers.
+
+4. **Access the application**
+
+   Once the server is running, the application will be accessible at:
+
+   ```
+   http://localhost:8000/
+   ```
+
+## Contributing
+
+We welcome contributions! Feel free to fork the repository and submit pull requests.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
