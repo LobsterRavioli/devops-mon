@@ -1,0 +1,92 @@
+<!-- templates/pokedex/pokemon_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex - Dettagli Pokémon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ pokemon.name }}</h1>
+    
+    <h2>Informazioni di Base</h2>
+    <ul>
+        <li><strong>ID:</strong> {{ pokemon.id }}</li>
+        <li><strong>Nome Inglese:</strong> {{ pokemon.name_english }}</li>
+        <li><strong>Nome Giapponese:</strong> {{ pokemon.name_japanese }}</li>
+        <li><strong>Nome Cinese:</strong> {{ pokemon.name_chinese }}</li>
+        <li><strong>Nome Francese:</strong> {{ pokemon.name_french }}</li>
+        <li><strong>Tipo 1:</strong> {{ pokemon.type_1 }}</li>
+        <li><strong>Tipo 2:</strong> {{ pokemon.type_2 }}</li>
+        <li><strong>HP:</strong> {{ pokemon.hp }}</li>
+        <li><strong>Attacco:</strong> {{ pokemon.attack }}</li>
+        <li><strong>Difesa:</strong> {{ pokemon.defense }}</li>
+        <li><strong>Attacco Speciale:</strong> {{ pokemon.sp_attack }}</li>
+        <li><strong>Difesa Speciale:</strong> {{ pokemon.sp_defense }}</li>
+        <li><strong>Velocità:</strong> {{ pokemon.speed }}</li>
+    </ul>
+    
+    <h2>Profilo</h2>
+    <ul>
+        <li><strong>Specie:</strong> {{ pokemon.species }}</li>
+        <li><strong>Descrizione:</strong> {{ pokemon.description }}</li>
+        <li><strong>Altezza:</strong> {{ pokemon.height }} m</li>
+        <li><strong>Peso:</strong> {{ pokemon.weight }} kg</li>
+        <li><strong>Gruppo Uovo 1:</strong> {{ pokemon.egg_group_1 }}</li>
+        <li><strong>Gruppo Uovo 2:</strong> {{ pokemon.egg_group_2 }}</li>
+        <li><strong>Abilità 1:</strong> {{ pokemon.ability_1_name }} {% if pokemon.ability_1_hidden %} (nascosta) {% endif %}</li>
+        <li><strong>Abilità 2:</strong> {{ pokemon.ability_2_name }} {% if pokemon.ability_2_hidden %} (nascosta) {% endif %}</li>
+        <li><strong>Rapporto di Genere:</strong> {{ pokemon.gender_ratio }}</li>
+    </ul>
+    
+    <h2>Immagine</h2>
+    <img src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}">
+
+    <p><a href="{% url 'pokemon_list' %}">Torna alla lista dei Pokémon</a></p>
+</body>
+</html>
