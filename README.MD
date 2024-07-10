@@ -1,6 +1,6 @@
 # Pokédex App
 
-![Pokédex](pokedex/static/images/pokedex_logo.png)
+![Pokédex](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstlukes-glenrothes.org%2F%3Fc%3Dpokeball-pokemon-ball-bit-2100x2600-png-download-pngkit-0-tt-RL9O1FX&psig=AOvVaw0ENumdi36Ezpovq1Er4WuO&ust=1720718878576000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPiDwr3_nIcDFQAAAAAdAAAAABAU)
 
 Pokédex App is a Django-based web application that serves as a Pokédex to display information about Pokémon.
 
